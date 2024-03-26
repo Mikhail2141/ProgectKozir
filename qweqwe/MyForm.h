@@ -53,6 +53,7 @@ namespace qweqwe {
 		/// “ребуемый метод дл€ поддержки конструктора Ч не измен€йте 
 		/// содержимое этого метода с помощью редактора кода.
 		/// </summary>
+		/// ..
 		void InitializeComponent(void)
 		{
 			this->button1 = (gcnew System::Windows::Forms::Button());
