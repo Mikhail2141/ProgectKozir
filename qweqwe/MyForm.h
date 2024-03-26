@@ -62,7 +62,7 @@ namespace qweqwe {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(144, 193);
+			this->button1->Location = System::Drawing::Point(130, 193);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(75, 23);
 			this->button1->TabIndex = 0;
