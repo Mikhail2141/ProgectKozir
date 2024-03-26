@@ -83,6 +83,7 @@ namespace qweqwe {
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(44, 20);
 			this->textBox2->TabIndex = 2;
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox2_TextChanged);
 			// 
 			// label1
 			// 
@@ -97,8 +98,8 @@ namespace qweqwe {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(385, 340);
-			this->Controls->Add(this->label1);
 			this->Controls->Add(this->textBox2);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->button1);
 			this->Name = L"MyForm";
@@ -120,5 +121,7 @@ namespace qweqwe {
 
 
 	}
-	};
+	private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
