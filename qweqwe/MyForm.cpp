@@ -1,5 +1,6 @@
 
 #include "MyForm.h"
+#include "MyForm1.h"
 using namespace qweqwe;
 using namespace System;
 [STAThreadAttribute]//now it may work!
