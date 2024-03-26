@@ -14,6 +14,7 @@ namespace qweqwe {
 	/// </summary>
 	public ref class MyForm1 : public System::Windows::Forms::Form
 	{
+		String^ l1;
 	public:
 		MyForm1(void)
 		{
@@ -99,6 +100,7 @@ namespace qweqwe {
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"решить";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm1::button1_Click);
 			// 
 			// label1
 			// 
@@ -209,5 +211,12 @@ namespace qweqwe {
 
 		}
 #pragma endregion
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		double a = System::Convert::ToDouble(textBox1->Text);
+		double b = System::Convert::ToDouble(textBox2->Text);
+		double lab1 = ;
+		l1 = "Answer:" + lab1;
+		label1->Text = l1;
+	}
+};
 }
