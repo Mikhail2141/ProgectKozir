@@ -1,5 +1,6 @@
 #pragma once
 #include "MyForm1.h"
+#include "MyForm2.h"
 namespace qweqwe {
 	
 	using namespace System;
@@ -16,6 +17,7 @@ namespace qweqwe {
 	{
 	public:
 		MyForm1^ F1;
+		MyForm2^ F2;
 		String^ p;
 		
 		MyForm(void)
@@ -80,6 +82,7 @@ namespace qweqwe {
 			this->button2->TabIndex = 4;
 			this->button2->Text = L"button2";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
 			// MyForm
 			// 
@@ -106,6 +109,11 @@ namespace qweqwe {
 		F1->Show();
 
 
+
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		F2 = gcnew MyForm2();
+		F2->Show();
 
 	}
 	};
