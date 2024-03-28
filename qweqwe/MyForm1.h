@@ -15,6 +15,13 @@ namespace qweqwe {
 	public ref class MyForm1 : public System::Windows::Forms::Form
 	{
 		String^ l1;
+		String^ l2;
+		String^ l3;
+		String^ l4;
+		String^ l5;
+		String^ l6;
+		String^ l7;
+
 	public:
 		MyForm1(void)
 		{
@@ -119,6 +126,7 @@ namespace qweqwe {
 			this->label2->Size = System::Drawing::Size(98, 13);
 			this->label2->TabIndex = 4;
 			this->label2->Text = L"квадрат разности";
+			this->label2->Click += gcnew System::EventHandler(this, &MyForm1::label2_Click);
 			// 
 			// label3
 			// 
@@ -214,9 +222,36 @@ namespace qweqwe {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		double a = System::Convert::ToDouble(textBox1->Text);
 		double b = System::Convert::ToDouble(textBox2->Text);
-		double lab1 = ;
-		l1 = "Answer:" + lab1;
+		double lab1 = (a*a) + (2 * a * b) + (b * b);
+		l1 = "квадрат суммы " + lab1;
 		label1->Text = l1;
+
+		double lab2 = (a * a) - (2 * a * b) + (b * b);
+		l2 = "квадрат разности " + lab2;
+		label2->Text = l2;
+
+		double lab3 = (a * a) - (b * b);
+		l3 = "разность квадратов " + lab3;
+		label6->Text = l3;
+
+		double lab4 = (a + b) * ((a*a) - a * b + (b*b));
+		l4 = "сумма кубов " + lab4;
+		label4->Text = l4;
+
+		double lab5 = (a - b) * ((a * a) + a * b + (b * b));;
+		l5 = "разность кубов " + lab5;
+		label5->Text = l5;
+
+		double lab6 = (a * a * a) + 3 * (a * a) * b + 3 * a * (b * b) + (b * b * b);
+		l6 = "куб суммы " + lab6;
+		label6->Text = l6;
+
+		double lab7 = (a * a * a) - 3 * (a * a) * b + 3 * a * (b * b) - (b * b * b);
+		l7 = "куб разности " + lab7;
+		label7->Text = l7;
 	}
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+}
 };
 }
