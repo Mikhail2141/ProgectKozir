@@ -66,21 +66,23 @@ namespace qweqwe {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(111, 49);
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
+			this->button1->Location = System::Drawing::Point(103, 58);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(146, 42);
+			this->button1->Size = System::Drawing::Size(171, 42);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"button1";
+			this->button1->Text = L" вадраты-кубы";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(111, 133);
+			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
+			this->button2->Location = System::Drawing::Point(103, 142);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(146, 42);
+			this->button2->Size = System::Drawing::Size(171, 42);
 			this->button2->TabIndex = 4;
-			this->button2->Text = L"button2";
+			this->button2->Text = L"ƒискриминант";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
@@ -92,7 +94,7 @@ namespace qweqwe {
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"Menu";
 			this->ResumeLayout(false);
 
 		}

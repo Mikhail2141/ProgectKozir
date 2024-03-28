@@ -101,9 +101,10 @@ namespace qweqwe {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(129, 342);
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
+			this->button1->Location = System::Drawing::Point(109, 342);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(93, 33);
+			this->button1->Size = System::Drawing::Size(110, 33);
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"решить";
 			this->button1->UseVisualStyleBackColor = true;
@@ -112,18 +113,22 @@ namespace qweqwe {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(31, 120);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label1->Location = System::Drawing::Point(12, 128);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(86, 13);
+			this->label1->Size = System::Drawing::Size(138, 20);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"квадрат суммы";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(31, 147);
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label2->Location = System::Drawing::Point(12, 155);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(98, 13);
+			this->label2->Size = System::Drawing::Size(163, 20);
 			this->label2->TabIndex = 4;
 			this->label2->Text = L"квадрат разности";
 			this->label2->Click += gcnew System::EventHandler(this, &MyForm1::label2_Click);
@@ -131,45 +136,55 @@ namespace qweqwe {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(31, 174);
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label3->Location = System::Drawing::Point(12, 182);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(110, 13);
+			this->label3->Size = System::Drawing::Size(183, 20);
 			this->label3->TabIndex = 5;
 			this->label3->Text = L"разность квадратов";
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(31, 201);
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label4->Location = System::Drawing::Point(12, 209);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(72, 13);
+			this->label4->Size = System::Drawing::Size(112, 20);
 			this->label4->TabIndex = 6;
 			this->label4->Text = L"сумма кубов";
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(31, 228);
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label5->Location = System::Drawing::Point(12, 236);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(86, 13);
+			this->label5->Size = System::Drawing::Size(139, 20);
 			this->label5->TabIndex = 9;
 			this->label5->Text = L"разность кубов";
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(31, 255);
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label6->Location = System::Drawing::Point(12, 263);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(62, 13);
+			this->label6->Size = System::Drawing::Size(94, 20);
 			this->label6->TabIndex = 8;
 			this->label6->Text = L"куб суммы";
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(31, 282);
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label7->Location = System::Drawing::Point(12, 290);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(74, 13);
+			this->label7->Size = System::Drawing::Size(119, 20);
 			this->label7->TabIndex = 7;
 			this->label7->Text = L"куб разности";
 			// 
@@ -213,7 +228,7 @@ namespace qweqwe {
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
 			this->Name = L"MyForm1";
-			this->Text = L"MyForm1";
+			this->Text = L"kvadrat-kub";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
