@@ -1,6 +1,7 @@
 #pragma once
 #include "MyForm1.h"
 #include "MyForm2.h"
+#include "MyForm3.h"
 namespace qweqwe {
 	
 	using namespace System;
@@ -18,6 +19,7 @@ namespace qweqwe {
 	public:
 		MyForm1^ F1;
 		MyForm2^ F2;
+		MyForm3^ F3;
 	private: System::Windows::Forms::Button^ button3;
 	public:
 		String^ p;
@@ -134,6 +136,8 @@ namespace qweqwe {
 
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		F3 = gcnew MyForm3();
+		F3->Show();
 	}
 };
 }
