@@ -18,6 +18,8 @@ namespace qweqwe {
 	public:
 		MyForm1^ F1;
 		MyForm2^ F2;
+	private: System::Windows::Forms::Button^ button3;
+	public:
 		String^ p;
 		
 		MyForm(void)
@@ -62,6 +64,7 @@ namespace qweqwe {
 		{
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// button1
@@ -86,11 +89,23 @@ namespace qweqwe {
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
+			// button3
+			// 
+			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
+			this->button3->Location = System::Drawing::Point(103, 227);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(171, 42);
+			this->button3->TabIndex = 5;
+			this->button3->Text = L"Cтепени";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(385, 340);
+			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Name = L"MyForm";
@@ -118,5 +133,7 @@ namespace qweqwe {
 		F2->Show();
 
 	}
-	};
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
