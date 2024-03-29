@@ -116,11 +116,11 @@ namespace qweqwe {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label1->Location = System::Drawing::Point(12, 128);
+			this->label1->Location = System::Drawing::Point(13, 125);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(138, 20);
+			this->label1->Size = System::Drawing::Size(140, 20);
 			this->label1->TabIndex = 3;
-			this->label1->Text = L"квадрат суммы";
+			this->label1->Text = L"Квадрат суммы";
 			// 
 			// label2
 			// 
@@ -129,9 +129,9 @@ namespace qweqwe {
 				static_cast<System::Byte>(204)));
 			this->label2->Location = System::Drawing::Point(12, 155);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(163, 20);
+			this->label2->Size = System::Drawing::Size(165, 20);
 			this->label2->TabIndex = 4;
-			this->label2->Text = L"квадрат разности";
+			this->label2->Text = L"Квадрат разности";
 			this->label2->Click += gcnew System::EventHandler(this, &MyForm1::label2_Click);
 			// 
 			// label3
@@ -141,9 +141,9 @@ namespace qweqwe {
 				static_cast<System::Byte>(204)));
 			this->label3->Location = System::Drawing::Point(12, 182);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(183, 20);
+			this->label3->Size = System::Drawing::Size(184, 20);
 			this->label3->TabIndex = 5;
-			this->label3->Text = L"разность квадратов";
+			this->label3->Text = L"Разность квадратов";
 			// 
 			// label4
 			// 
@@ -152,9 +152,9 @@ namespace qweqwe {
 				static_cast<System::Byte>(204)));
 			this->label4->Location = System::Drawing::Point(12, 209);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(112, 20);
+			this->label4->Size = System::Drawing::Size(115, 20);
 			this->label4->TabIndex = 6;
-			this->label4->Text = L"сумма кубов";
+			this->label4->Text = L"Сумма кубов";
 			// 
 			// label5
 			// 
@@ -163,9 +163,9 @@ namespace qweqwe {
 				static_cast<System::Byte>(204)));
 			this->label5->Location = System::Drawing::Point(12, 236);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(139, 20);
+			this->label5->Size = System::Drawing::Size(140, 20);
 			this->label5->TabIndex = 9;
-			this->label5->Text = L"разность кубов";
+			this->label5->Text = L"Разность кубов";
 			// 
 			// label6
 			// 
@@ -174,9 +174,9 @@ namespace qweqwe {
 				static_cast<System::Byte>(204)));
 			this->label6->Location = System::Drawing::Point(12, 263);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(94, 20);
+			this->label6->Size = System::Drawing::Size(96, 20);
 			this->label6->TabIndex = 8;
-			this->label6->Text = L"куб суммы";
+			this->label6->Text = L"Куб суммы";
 			// 
 			// label7
 			// 
@@ -185,9 +185,9 @@ namespace qweqwe {
 				static_cast<System::Byte>(204)));
 			this->label7->Location = System::Drawing::Point(12, 290);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(119, 20);
+			this->label7->Size = System::Drawing::Size(121, 20);
 			this->label7->TabIndex = 7;
-			this->label7->Text = L"куб разности";
+			this->label7->Text = L"Куб разности";
 			// 
 			// label8
 			// 
@@ -230,6 +230,7 @@ namespace qweqwe {
 			this->Controls->Add(this->textBox1);
 			this->Name = L"MyForm1";
 			this->Text = L"kvadrat-kub";
+			this->Load += gcnew System::EventHandler(this, &MyForm1::MyForm1_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -270,6 +271,8 @@ private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e)
 
 }
 private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void MyForm1_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
