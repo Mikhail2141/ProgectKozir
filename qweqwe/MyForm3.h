@@ -248,8 +248,6 @@ namespace qweqwe {
     label2->Text = "a^" + exponent1.ToString() + " * a^" + exponent2.ToString() + " = a^" + product.ToString();
     label4->Text = "a^" + exponent1.ToString() + " / a^" + exponent2.ToString() + 
                    (exponent1 >= exponent2 ? " = a^" + (exponent1 - exponent2).ToString() : "");
-
-
     if (quotient == -1)
     {
       label4->Text = "Error: Divisor exponent cannot be greater than dividend exponent.";
