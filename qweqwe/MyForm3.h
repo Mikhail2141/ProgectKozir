@@ -87,9 +87,9 @@ namespace qweqwe {
 			// 
 			// richTextBox1
 			// 
-			this->richTextBox1->Location = System::Drawing::Point(63, 90);
+			this->richTextBox1->Location = System::Drawing::Point(64, 90);
 			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(51, 49);
+			this->richTextBox1->Size = System::Drawing::Size(52, 49);
 			this->richTextBox1->TabIndex = 1;
 			this->richTextBox1->Text = L"";
 			// 
@@ -115,7 +115,7 @@ namespace qweqwe {
 			// 
 			// richTextBox3
 			// 
-			this->richTextBox3->Location = System::Drawing::Point(341, 90);
+			this->richTextBox3->Location = System::Drawing::Point(343, 90);
 			this->richTextBox3->Name = L"richTextBox3";
 			this->richTextBox3->Size = System::Drawing::Size(51, 49);
 			this->richTextBox3->TabIndex = 6;
@@ -189,19 +189,83 @@ namespace qweqwe {
 
 		}
 #pragma endregion
-	private: System::Void MyForm3_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label2_Click_1(System::Object^ sender, System::EventArgs^ e) {
-}
+
+  private:
+	  int MultiplyExponents(int base, int x, int y)
+	  {
+		  return base ^ (x + y);
+	  }
+	  int DivideExponents(int base, int x, int y)
+	  {
+		  if (x < y)
+		  {
+			  MessageBox::Show("Error: Divisor exponent cannot be greater than dividend exponent.");
+			  return -1;
+		  }
+
+		  return base ^ (x - y);
+	  }
+
+  private: System::Void MyForm3_Load(System::Object^ sender, System::EventArgs^ e)
+  {
+  }
+
+  private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e)
+  {
+  }
+
+  private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e)
+  {
+  }
+
+  private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e)
+  {
+	  int baseValue;
+	  int exponent1, exponent2;
+	  try
+	  {
+		  baseValue = Convert::ToInt32(richTextBox1->Text);
+		  exponent1 = Convert::ToInt32(richTextBox2->Text);
+		  exponent2 = Convert::ToInt32(richTextBox3->Text);
+		   }
+    catch (FormatException^)
+    {
+      MessageBox::Show("Error: Please enter valid integer values for base and exponents.");
+      return;
+    }
+
+    int product = MultiplyExponents(baseValue, exponent1, exponent2);
+    int quotient = DivideExponents(baseValue, exponent1, exponent2);
+
+    richTextBox1->Clear();
+    richTextBox2->Clear();
+    richTextBox3->Clear();
+	richTextBox1->Text = baseValue.ToString();
+    richTextBox2->Text = exponent1.ToString();
+    richTextBox3->Text = exponent2.ToString();
+
+
+    label2->Text = "a^" + exponent1.ToString() + " * a^" + exponent2.ToString() + " = a^" + product.ToString();
+    label4->Text = "a^" + exponent1.ToString() + " / a^" + exponent2.ToString() + 
+                   (exponent1 >= exponent2 ? " = a^" + (exponent1 - exponent2).ToString() : "");
+
+
+    if (quotient == -1)
+    {
+      label4->Text = "Error: Divisor exponent cannot be greater than dividend exponent.";
+    }
+  }
+
+  private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e)
+  {
+  }
+
+  private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e)
+  {
+  }
+
+  private: System::Void label2_Click_1(System::Object^ sender, System::EventArgs^ e)
+  {
+  }
 };
 }
