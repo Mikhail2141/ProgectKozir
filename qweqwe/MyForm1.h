@@ -85,11 +85,12 @@ namespace qweqwe {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(78, 45);
+			this->textBox1->Location = System::Drawing::Point(76, 45);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(55, 47);
 			this->textBox1->TabIndex = 0;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MyForm1::textBox1_TextChanged);
 			// 
 			// textBox2
 			// 
@@ -267,6 +268,8 @@ namespace qweqwe {
 	}
 private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 
+}
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
