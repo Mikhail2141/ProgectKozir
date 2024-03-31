@@ -42,9 +42,10 @@ namespace qweqwe {
 	private: System::Windows::Forms::TextBox^ textBox3;
 
 
-	private: System::Windows::Forms::TextBox^ textBox6;
+
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label5;
 
 
 
@@ -69,9 +70,9 @@ namespace qweqwe {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// Решить
@@ -131,17 +132,6 @@ namespace qweqwe {
 			this->textBox3->Size = System::Drawing::Size(62, 55);
 			this->textBox3->TabIndex = 6;
 			// 
-			// textBox6
-			// 
-			this->textBox6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->textBox6->ForeColor = System::Drawing::Color::Black;
-			this->textBox6->Location = System::Drawing::Point(79, 12);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(263, 22);
-			this->textBox6->TabIndex = 9;
-			this->textBox6->Text = L"  Свойство корней в n-ой степени";
-			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
@@ -164,6 +154,17 @@ namespace qweqwe {
 			this->label4->TabIndex = 12;
 			this->label4->Text = L" n^√a/b =  ";
 			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label5->Location = System::Drawing::Point(48, 9);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(337, 24);
+			this->label5->TabIndex = 13;
+			this->label5->Text = L"Свойство корней в n-ой степени";
+			// 
 			// MyForm4
 			// 
 			this->AccessibleName = L"";
@@ -171,9 +172,9 @@ namespace qweqwe {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
 			this->ClientSize = System::Drawing::Size(417, 330);
+			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
-			this->Controls->Add(this->textBox6);
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
