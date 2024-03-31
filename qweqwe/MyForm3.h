@@ -1,5 +1,5 @@
 #pragma once
-
+#include <cmath>
 namespace qweqwe {
 
 	using namespace System;
@@ -42,9 +42,10 @@ namespace qweqwe {
 	private: System::Windows::Forms::Label^ label3;
 
 
-	private: System::Windows::Forms::TextBox^ textBox3;
+
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label5;
 
 	protected:
 
@@ -66,19 +67,19 @@ namespace qweqwe {
 			this->richTextBox2 = (gcnew System::Windows::Forms::RichTextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->richTextBox3 = (gcnew System::Windows::Forms::RichTextBox());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button1->Location = System::Drawing::Point(190, 307);
+			this->button1->Location = System::Drawing::Point(287, 333);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(112, 32);
+			this->button1->Size = System::Drawing::Size(171, 52);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"РЕШИТЬ";
 			this->button1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
@@ -87,7 +88,7 @@ namespace qweqwe {
 			// 
 			// richTextBox1
 			// 
-			this->richTextBox1->Location = System::Drawing::Point(64, 90);
+			this->richTextBox1->Location = System::Drawing::Point(92, 86);
 			this->richTextBox1->Name = L"richTextBox1";
 			this->richTextBox1->Size = System::Drawing::Size(52, 49);
 			this->richTextBox1->TabIndex = 1;
@@ -95,7 +96,7 @@ namespace qweqwe {
 			// 
 			// richTextBox2
 			// 
-			this->richTextBox2->Location = System::Drawing::Point(478, 90);
+			this->richTextBox2->Location = System::Drawing::Point(575, 90);
 			this->richTextBox2->Name = L"richTextBox2";
 			this->richTextBox2->Size = System::Drawing::Size(51, 49);
 			this->richTextBox2->TabIndex = 2;
@@ -106,7 +107,7 @@ namespace qweqwe {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label1->Location = System::Drawing::Point(60, 63);
+			this->label1->Location = System::Drawing::Point(88, 53);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(72, 20);
 			this->label1->TabIndex = 4;
@@ -115,34 +116,11 @@ namespace qweqwe {
 			// 
 			// richTextBox3
 			// 
-			this->richTextBox3->Location = System::Drawing::Point(343, 90);
+			this->richTextBox3->Location = System::Drawing::Point(407, 90);
 			this->richTextBox3->Name = L"richTextBox3";
 			this->richTextBox3->Size = System::Drawing::Size(51, 49);
 			this->richTextBox3->TabIndex = 6;
 			this->richTextBox3->Text = L"";
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label3->Location = System::Drawing::Point(403, 63);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(81, 20);
-			this->label3->TabIndex = 2;
-			this->label3->Text = L"Степень";
-			this->label3->Click += gcnew System::EventHandler(this, &MyForm3::label3_Click);
-			// 
-			// textBox3
-			// 
-			this->textBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->textBox3->ForeColor = System::Drawing::Color::Black;
-			this->textBox3->Location = System::Drawing::Point(190, 12);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(204, 29);
-			this->textBox3->TabIndex = 9;
-			this->textBox3->Text = L"Свойство степеней";
 			// 
 			// label2
 			// 
@@ -156,6 +134,18 @@ namespace qweqwe {
 			this->label2->Text = L"Умножение степени с одинаковым основанием ";
 			this->label2->Click += gcnew System::EventHandler(this, &MyForm3::label2_Click_1);
 			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label3->Location = System::Drawing::Point(481, 53);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(81, 20);
+			this->label3->TabIndex = 2;
+			this->label3->Text = L"Степень";
+			this->label3->Click += gcnew System::EventHandler(this, &MyForm3::label3_Click);
+			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
@@ -166,15 +156,27 @@ namespace qweqwe {
 			this->label4->Size = System::Drawing::Size(392, 20);
 			this->label4->TabIndex = 11;
 			this->label4->Text = L"Деление степени с одинаковым основанием ";
+			this->label4->Click += gcnew System::EventHandler(this, &MyForm3::label4_Click);
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label5->Location = System::Drawing::Point(220, 9);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(174, 20);
+			this->label5->TabIndex = 12;
+			this->label5->Text = L"Свойство степеней";
 			// 
 			// MyForm3
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(582, 370);
+			this->ClientSize = System::Drawing::Size(746, 415);
+			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label2);
-			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->richTextBox3);
 			this->Controls->Add(this->label1);
@@ -193,17 +195,18 @@ namespace qweqwe {
   private:
 	  int MultiplyExponents(int base, int x, int y)
 	  {
-		  return base ^ (x + y);
+		 
+		  return base ^ (y + x);
 	  }
 	  int DivideExponents(int base, int x, int y)
 	  {
-		  if (x < y)
+		  if (x > y)
 		  {
-			  MessageBox::Show("Error: Divisor exponent cannot be greater than dividend exponent.");
-			  return -1;
+			  MessageBox::Show("Ошибка: Показатель делителя не может быть больше показателя делимого");
+			 return -1;
 		  }
 
-		  return base ^ (x - y);
+		  return base ^ (y - x);
 	  }
 
   private: System::Void MyForm3_Load(System::Object^ sender, System::EventArgs^ e)
@@ -230,11 +233,11 @@ namespace qweqwe {
 		   }
     catch (FormatException^)
     {
-      MessageBox::Show("Error: Please enter valid integer values for base and exponents.");
+      MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения для основания и экспоненты.");
       return;
     }
 
-    int product = MultiplyExponents(baseValue, exponent1, exponent2);
+    int product = MultiplyExponents( baseValue,  exponent1, exponent2);
     int quotient = DivideExponents(baseValue, exponent1, exponent2);
 
     richTextBox1->Clear();
@@ -245,12 +248,17 @@ namespace qweqwe {
     richTextBox3->Text = exponent2.ToString();
 
 
-    label2->Text = "a^" + exponent1.ToString() + " * a^" + exponent2.ToString() + " = a^" + product.ToString();
-    label4->Text = "a^" + exponent1.ToString() + " / a^" + exponent2.ToString() + 
-                   (exponent1 >= exponent2 ? " = a^" + (exponent1 - exponent2).ToString() : "");
+	label2->Text = baseValue + "^" + exponent2.ToString() +" * "+ baseValue + "^" + exponent1.ToString() + " = "
+		+ baseValue + "^" + (exponent2 + exponent1).ToString() + " = " +  pow(baseValue , (exponent2 + exponent1));
+    
+	label4->Text =  baseValue + "^" + exponent2.ToString() + " / " + baseValue+"^"+ exponent1.ToString() +
+                   (exponent2 >= exponent1 ? " = " + baseValue+ "^" + (exponent2 - exponent1).ToString() + " = " + pow(baseValue, (exponent2 - exponent1)) : "");
+	 
+	
+
     if (quotient == -1)
     {
-      label4->Text = "Error: Divisor exponent cannot be greater than dividend exponent.";
+      label4->Text = "Ошибка: Показатель делителя не может быть больше показателя делимого.";
     }
   }
 
@@ -265,5 +273,7 @@ namespace qweqwe {
   private: System::Void label2_Click_1(System::Object^ sender, System::EventArgs^ e)
   {
   }
+private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
