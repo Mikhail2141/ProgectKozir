@@ -1,4 +1,5 @@
 #pragma once
+ 
 #include "MyForm1.h"
 #include "MyForm2.h"
 #include "MyForm3.h"
@@ -27,6 +28,11 @@ namespace qweqwe {
 	public:
 		String^ p;
 		
+
+
+		
+
+
 		MyForm(void)
 		{
 			InitializeComponent();
@@ -48,7 +54,7 @@ namespace qweqwe {
 		}
 	private: System::Windows::Forms::Button^ button1;
 
-
+		 
 
 	private: System::Windows::Forms::Button^ button2;
 	protected:
@@ -132,6 +138,9 @@ namespace qweqwe {
 
 		}
 #pragma endregion
+
+
+
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		//double a = System::Convert::ToDouble(textBox1->Text);
