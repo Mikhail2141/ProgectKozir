@@ -2,6 +2,7 @@
 #include "MyForm.h"
 #include"MyForm1.h"
 #include"MyForm5.h"
+  
 using namespace qweqwe;
 using namespace System;
 [STAThreadAttribute]//now it may work!
