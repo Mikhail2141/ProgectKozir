@@ -1,5 +1,5 @@
 #pragma once
- 
+#include "MyForm7.h"
 namespace qweqwe {
 
 	using namespace System;
@@ -15,7 +15,7 @@ namespace qweqwe {
 	public ref class MyForm6 : public System::Windows::Forms::Form
 	{
 	public:
-
+		MyForm7^ F7;
 
 	 
 
@@ -159,6 +159,8 @@ namespace qweqwe {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		F7 = gcnew MyForm7(); 
+		F7-> Show(); 
 	}
 };
 }
