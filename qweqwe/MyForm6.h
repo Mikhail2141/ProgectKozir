@@ -1,7 +1,5 @@
 #pragma once
 #include "MyForm7.h"
-#include "MyForm8.h"
-#include "MyForm9.h"
 namespace qweqwe {
 
 	using namespace System;
@@ -18,8 +16,7 @@ namespace qweqwe {
 	{
 	public:
 		MyForm7^ F7;
-		MyForm8^ F8;
-		MyForm9^ F9;
+
 	 
 
 		MyForm6(void)
@@ -158,13 +155,8 @@ namespace qweqwe {
 #pragma endregion
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		F8 = gcnew MyForm8();
-		F8->Show();
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-
-		F9 = gcnew MyForm9();
-		F9->Show();
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		F7 = gcnew MyForm7(); 
