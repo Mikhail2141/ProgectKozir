@@ -72,10 +72,9 @@ namespace qweqwe {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button1->Location = System::Drawing::Point(148, 254);
-			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button1->Location = System::Drawing::Point(197, 313);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(103, 52);
+			this->button1->Size = System::Drawing::Size(137, 64);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Решить";
 			this->button1->UseVisualStyleBackColor = true;
@@ -86,10 +85,9 @@ namespace qweqwe {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label1->Location = System::Drawing::Point(35, 7);
-			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label1->Location = System::Drawing::Point(47, 9);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(334, 20);
+			this->label1->Size = System::Drawing::Size(405, 25);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Площадь и периметр прямоугольника";
 			this->label1->Click += gcnew System::EventHandler(this, &MyForm7::label1_Click);
@@ -99,10 +97,9 @@ namespace qweqwe {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label2->Location = System::Drawing::Point(21, 57);
-			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label2->Location = System::Drawing::Point(28, 70);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(63, 20);
+			this->label2->Size = System::Drawing::Size(78, 25);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Длина";
 			// 
@@ -111,28 +108,28 @@ namespace qweqwe {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label3->Location = System::Drawing::Point(280, 57);
-			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label3->Location = System::Drawing::Point(374, 70);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(73, 20);
+			this->label3->Size = System::Drawing::Size(88, 25);
 			this->label3->TabIndex = 3;
 			this->label3->Text = L"Ширина";
-			this->label3->Click += gcnew System::EventHandler(this, &MyForm7::label3_Click);
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(25, 88);
+			this->textBox1->Location = System::Drawing::Point(33, 108);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(54, 51);
+			this->textBox1->Size = System::Drawing::Size(70, 62);
 			this->textBox1->TabIndex = 4;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(284, 88);
+			this->textBox2->Location = System::Drawing::Point(379, 108);
+			this->textBox2->Margin = System::Windows::Forms::Padding(4);
 			this->textBox2->Multiline = true;
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(55, 51);
+			this->textBox2->Size = System::Drawing::Size(72, 62);
 			this->textBox2->TabIndex = 5;
 			// 
 			// label4
@@ -140,10 +137,9 @@ namespace qweqwe {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label4->Location = System::Drawing::Point(7, 160);
-			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label4->Location = System::Drawing::Point(3, 194);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(232, 20);
+			this->label4->Size = System::Drawing::Size(278, 25);
 			this->label4->TabIndex = 6;
 			this->label4->Text = L"Площадь прямоугольника";
 			this->label4->Click += gcnew System::EventHandler(this, &MyForm7::label4_Click);
@@ -153,18 +149,17 @@ namespace qweqwe {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label5->Location = System::Drawing::Point(2, 191);
-			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label5->Location = System::Drawing::Point(3, 235);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(237, 20);
+			this->label5->Size = System::Drawing::Size(291, 25);
 			this->label5->TabIndex = 7;
 			this->label5->Text = L"Переметр прямоугольника";
 			// 
 			// MyForm7
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(399, 316);
+			this->ClientSize = System::Drawing::Size(532, 389);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->textBox2);
@@ -173,7 +168,6 @@ namespace qweqwe {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button1);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"MyForm7";
 			this->Text = L"MyForm7";
 			this->ResumeLayout(false);
@@ -221,7 +215,5 @@ namespace qweqwe {
 
 
 
-private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
-}
 };
 }
