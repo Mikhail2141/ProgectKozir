@@ -1,5 +1,6 @@
 #pragma once
 #include "MyForm7.h"
+#include "MyForm9.h"
 namespace qweqwe {
 
 	using namespace System;
@@ -16,6 +17,7 @@ namespace qweqwe {
 	{
 	public:
 		MyForm7^ F7;
+		MyForm9^ F9;
 
 	 
 
@@ -135,6 +137,7 @@ namespace qweqwe {
 			this->button6->TabIndex = 5;
 			this->button6->Text = L"Паралеллограм";
 			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm6::button6_Click);
 			// 
 			// MyForm6
 			// 
@@ -162,5 +165,9 @@ namespace qweqwe {
 		F7 = gcnew MyForm7(); 
 		F7-> Show(); 
 	}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	F9 = gcnew MyForm9();
+	F9->Show();
+}
 };
 }
