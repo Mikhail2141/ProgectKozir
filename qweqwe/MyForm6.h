@@ -116,6 +116,7 @@ namespace qweqwe {
 			this->button4->TabIndex = 3;
 			this->button4->Text = L"Круг";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm6::button4_Click);
 			// 
 			// button5
 			// 
@@ -170,5 +171,9 @@ namespace qweqwe {
 		F7 = gcnew MyForm7(); 
 		F7-> Show(); 
 	}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	F10 = gcnew MyForm10();
+	F10->Show();
+}
 };
 }
