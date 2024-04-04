@@ -43,7 +43,6 @@ namespace qweqwe {
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label5;
 
-
 	protected:
 
 	private:
@@ -176,8 +175,7 @@ namespace qweqwe {
 			this->Controls->Add(this->button1);
 			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"MyForm7";
-			this->Text = L"Circle";
-			this->Load += gcnew System::EventHandler(this, &MyForm7::MyForm7_Load);
+			this->Text = L"MyForm7";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
