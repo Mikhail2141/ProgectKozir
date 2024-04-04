@@ -12,10 +12,10 @@ namespace qweqwe {
 	/// <summary>
 	/// Сводка для MyForm8
 	/// </summary>
-	public ref class MyForm9 : public System::Windows::Forms::Form
+	public ref class MyForm11 : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm9(void)
+		MyForm11(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace qweqwe {
 		/// <summary>
 		/// Освободить все используемые ресурсы.
 		/// </summary>
-		~MyForm9()
+		~MyForm11()
 		{
 			if (components)
 			{
@@ -123,7 +123,7 @@ namespace qweqwe {
 			this->label4->Size = System::Drawing::Size(249, 20);
 			this->label4->TabIndex = 11;
 			this->label4->Text = L"Площадь паралеллограмма";
-			this->label4->Click += gcnew System::EventHandler(this, &MyForm9::label4_Click);
+			this->label4->Click += gcnew System::EventHandler(this, &MyForm11::label4_Click);
 			// 
 			// button1
 			// 
@@ -136,7 +136,7 @@ namespace qweqwe {
 			this->button1->TabIndex = 12;
 			this->button1->Text = L"Решить";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm9::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm11::button1_Click);
 			// 
 			// MyForm8
 			// 
