@@ -41,6 +41,7 @@ namespace qweqwe {
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Label^ label2;
 
 
 
@@ -70,6 +71,7 @@ namespace qweqwe {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// textBox1
@@ -138,18 +140,32 @@ namespace qweqwe {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm11::button1_Click);
 			// 
-			// MyForm8
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label2->Location = System::Drawing::Point(42, 319);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(280, 20);
+			this->label2->TabIndex = 13;
+			this->label2->Text = L"Ïכמשאהü ןאנאכוככמדנאללא ¹2";
+			this->label2->Click += gcnew System::EventHandler(this, &MyForm11::label2_Click_1);
+			// 
+			// MyForm11
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(521, 494);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
-			this->Name = L"MyForm8";
+			this->Name = L"MyForm11";
 			this->Text = L"MyForm8";
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -165,6 +181,7 @@ private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e)
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	double rectangleLength;
 	double rectangleWidth;
+	double sin = 0.6;
 
 	try
 	{
@@ -179,8 +196,12 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 
 
 	double Square = rectangleLength * rectangleWidth;
+	double parallelogram = rectangleLength * rectangleWidth * sin;
 
 	label4->Text = "Ïכמשאהü ןאנאכוככמדנאללא " + " = " + Square.ToString();
+	label2->Text = "Ïכמשאהü ןאנאכוככמדנאללא ¹2 " + " = " + parallelogram.ToString();
+}
+private: System::Void label2_Click_1(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
