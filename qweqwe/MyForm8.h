@@ -135,6 +135,7 @@ namespace qweqwe {
 			this->button1->TabIndex = 9;
 			this->button1->Text = L"Решить";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm8::button1_Click);
 			// 
 			// label3
 			// 
@@ -167,5 +168,30 @@ namespace qweqwe {
 
 		}
 #pragma endregion
-	};
+
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+
+		double squareSide;
+
+		try
+		{
+			squareSide = Convert::ToDouble(textBox1->Text);
+		}
+		catch (FormatException^)
+		{
+			MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения для стороны квадрата"); 
+			return; 
+		}
+
+		
+		 
+		double Square = squareSide * squareSide; 
+		double Perimeter = squareSide * 4; 
+
+
+		label4->Text = "Площадь квадрата" + " = " + Square;
+		label5->Text = "Периметер квадрата" + " = " + Perimeter; 
+	}
+};
 }
