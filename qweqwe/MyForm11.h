@@ -52,6 +52,7 @@ namespace qweqwe {
 	private: System::Windows::Forms::Label^ label2;
     private: System::Windows::Forms::Label^ label3;
     private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::Label^ label2;
 
 
 
@@ -124,6 +125,7 @@ namespace qweqwe {
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
             this->label12 = (gcnew System::Windows::Forms::Label());
             this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// textBox1
@@ -502,6 +504,21 @@ namespace qweqwe {
             // MyForm9
 			// MyForm11
 			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label2->Location = System::Drawing::Point(42, 319);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(280, 20);
+			this->label2->TabIndex = 13;
+			this->label2->Text = L"Площадь паралеллограмма №2";
+			this->label2->Click += gcnew System::EventHandler(this, &MyForm11::label2_Click_1);
+			// 
+			// MyForm11
+			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
             this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -527,6 +544,7 @@ namespace qweqwe {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label6);
             this->Controls->Add(this->label3);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label2);
             this->Controls->Add(this->label5);
@@ -536,7 +554,7 @@ namespace qweqwe {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
-			this->Name = L"MyForm8";
+			this->Name = L"MyForm11";
 			this->Text = L"MyForm8";
             this->Controls->Add(this->label2);
             this->Controls->Add(this->label1);
@@ -577,6 +595,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		double d1; 
 		double d2; 
 		double Sin; 
+	double sin = 0.6;
 
 	try
 	{
@@ -635,6 +654,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		// Рассчёт площади ромба через радиус вписанной окружности и сторону
 		double Square4 = (2 * rhombSide) * Pi;
 		label6->Text = "площадь ромба через радиус вписанной окружности и сторону"  + " = " + Square4;
+	double parallelogram = rectangleLength * rectangleWidth * sin;
 
 	label4->Text = "Площадь паралеллограмма " + " = " + Square.ToString();
        // Периметр 
@@ -645,6 +665,9 @@ private: System::Void MyForm9_Load(System::Object^ sender, System::EventArgs^ e)
 		double perimeter = 4 * rhombSide; 
 		label5->Text = "Периметр ромба" + " = " + perimeter;
 
+	label2->Text = "Площадь паралеллограмма №2 " + " = " + parallelogram.ToString();
+}
+private: System::Void label2_Click_1(System::Object^ sender, System::EventArgs^ e) {
 }
  
 };
