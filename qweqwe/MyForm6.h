@@ -2,6 +2,7 @@
 #include "MyForm7.h"
 #include "MyForm8.h"
 #include "MyForm9.h"
+#include "Circle.h"
 namespace qweqwe {
 
 	using namespace System;
@@ -20,7 +21,7 @@ namespace qweqwe {
 		MyForm7^ F7;
 		MyForm8^ F8;
 		MyForm9^ F9;
-	 
+		Circle^ F10;
 
 		MyForm6(void)
 		{
@@ -170,5 +171,10 @@ namespace qweqwe {
 		F7 = gcnew MyForm7(); 
 		F7-> Show(); 
 	}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	F10 = gcnew Circle();
+	F10->Show();
+}
+
 };
 }

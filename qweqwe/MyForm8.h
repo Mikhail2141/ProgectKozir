@@ -135,6 +135,7 @@ namespace qweqwe {
 			this->button1->TabIndex = 9;
 			this->button1->Text = L"Решить";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm8::button1_Click);
 			// 
 			// label3
 			// 
@@ -152,7 +153,7 @@ namespace qweqwe {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(384, 261);
+			this->ClientSize = System::Drawing::Size(382, 263);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label5);
@@ -167,5 +168,17 @@ namespace qweqwe {
 
 		}
 #pragma endregion
-	};
+	private: System::Void MyForm8_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	double sideLength = System::Convert::ToDouble(textBox1->Text);
+
+	
+	double area = sideLength * sideLength;
+	double perimeter = 4 * sideLength;
+	label4->Text = "Площадь Квадрата : " + area.ToString();
+	label5->Text = "Периметр Квадрата: " + perimeter.ToString();
+
+}
+};
 }
