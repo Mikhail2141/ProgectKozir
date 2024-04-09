@@ -1,7 +1,5 @@
 #pragma once
-#include "MyForm.h"
-#include "MyForm6.h"
-#include "MyForm12.h"
+
 namespace qweqwe {
 
 	using namespace System;
@@ -12,22 +10,12 @@ namespace qweqwe {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для MyForm5
+	/// Сводка для MyForm14
 	/// </summary>
-	public ref class MyForm5 : public System::Windows::Forms::Form
+	public ref class MyForm14 : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm^ F;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button3;
-	public:
-
-
-		MyForm6^ F6;
-		MyForm12^ F12;
-
-
-		MyForm5(void)
+		MyForm14(void)
 		{
 			InitializeComponent();
 			//
@@ -39,7 +27,7 @@ namespace qweqwe {
 		/// <summary>
 		/// Освободить все используемые ресурсы.
 		/// </summary>
-		~MyForm5()
+		~MyForm14()
 		{
 			if (components)
 			{
@@ -47,15 +35,15 @@ namespace qweqwe {
 			}
 		}
 	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ button3;
 	protected:
-
-	private: System::Windows::Forms::Label^ label7;
 
 	private:
 		/// <summary>
 		/// Обязательная переменная конструктора.
 		/// </summary>
-		System::ComponentModel::Container^ components;
+		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -65,7 +53,6 @@ namespace qweqwe {
 		void InitializeComponent(void)
 		{
 			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
@@ -73,80 +60,46 @@ namespace qweqwe {
 			// button1
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
-			this->button1->Location = System::Drawing::Point(142, 85);
+			this->button1->Location = System::Drawing::Point(68, 77);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(171, 42);
-			this->button1->TabIndex = 1;
-			this->button1->Text = L"Алгебра";
+			this->button1->TabIndex = 2;
+			this->button1->Text = L"Давление";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm5::button1_Click);
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
-			this->label7->Location = System::Drawing::Point(100, 20);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(273, 24);
-			this->label7->TabIndex = 11;
-			this->label7->Text = L"Решебник задач \"Козырь\" ";
 			// 
 			// button2
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
-			this->button2->Location = System::Drawing::Point(142, 144);
+			this->button2->Location = System::Drawing::Point(68, 146);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(171, 42);
-			this->button2->TabIndex = 12;
-			this->button2->Text = L"Геометрия";
+			this->button2->TabIndex = 3;
+			this->button2->Text = L"Сила тяжести";
 			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &MyForm5::button2_Click);
 			// 
 			// button3
 			// 
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
-			this->button3->Location = System::Drawing::Point(142, 205);
+			this->button3->Location = System::Drawing::Point(43, 12);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(171, 42);
-			this->button3->TabIndex = 13;
-			this->button3->Text = L"Физика";
+			this->button3->Size = System::Drawing::Size(229, 42);
+			this->button3->TabIndex = 4;
+			this->button3->Text = L"Плотность вещества";
 			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &MyForm5::button3_Click);
 			// 
-			// MyForm5
+			// MyForm14
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(460, 327);
+			this->ClientSize = System::Drawing::Size(314, 261);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
-			this->Controls->Add(this->label7);
 			this->Controls->Add(this->button1);
-			this->Name = L"MyForm5";
-			this->Text = L"Munu";
-
+			this->Name = L"MyForm14";
+			this->Text = L"MyForm14";
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-
-		F = gcnew MyForm();
-		F->Show();
-
-	}
-
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-
-		F6 = gcnew MyForm6();
-		F6->Show();
-	}
-
-
-	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-		F12 = gcnew MyForm12();
-		F12->Show();
-	}
 	};
 }
