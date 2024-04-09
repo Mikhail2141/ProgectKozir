@@ -181,9 +181,22 @@ namespace qweqwe {
 
     }
     private: System::Void SolveButton_Click(System::Object^ sender, System::EventArgs^ e) {
-        double exponent = Convert::ToDouble(textBox2->Text);
-        double number1 = Convert::ToDouble(textBox1->Text);
-        double number2 = Convert::ToDouble(textBox3->Text);
+        double exponent;
+        double number1;
+        double number2;
+
+
+        try
+        {
+            number1 = Convert::ToInt32(textBox1->Text);
+            exponent = Convert::ToInt32(textBox2->Text);
+            number2 = Convert::ToInt32(textBox3->Text);
+        }
+        catch (FormatException^)
+        {
+            MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения для основания и экспоненты.");
+            return;
+        }
 
         double result1 = Math::Pow(number1 * number2, 1.0 / exponent);
         double result2 = Math::Pow(number1 / number2, 1.0 / exponent);

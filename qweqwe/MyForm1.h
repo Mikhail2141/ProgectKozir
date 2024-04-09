@@ -237,8 +237,25 @@ namespace qweqwe {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		double a = System::Convert::ToDouble(textBox1->Text);
-		double b = System::Convert::ToDouble(textBox2->Text);
+
+		
+
+
+
+		double a;
+		double b;
+
+		try
+		{
+			b = Convert::ToDouble(textBox2->Text);
+			a = Convert::ToDouble(textBox1->Text);
+		}
+		catch (FormatException^)
+		{
+			MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения для длины и ширины прямоугольника");
+			return;
+		}
+
 		double lab1 = (a*a) + (2 * a * b) + (b * b);
 		l1 = "квадрат суммы " + lab1;
 		label1->Text = l1;
