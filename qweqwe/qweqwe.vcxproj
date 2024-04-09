@@ -122,12 +122,16 @@
   <ItemGroup>
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="MyForm1.cpp" />
+    <ClCompile Include="MyForm10.cpp" />
+    <ClCompile Include="MyForm11.cpp" />
     <ClCompile Include="MyForm2.cpp" />
     <ClCompile Include="MyForm3.cpp" />
     <ClCompile Include="MyForm4.cpp" />
     <ClCompile Include="MyForm5.cpp" />
     <ClCompile Include="MyForm6.cpp" />
     <ClCompile Include="MyForm7.cpp" />
+    <ClCompile Include="MyForm8.cpp" />
+    <ClCompile Include="MyForm9.cpp" />
     <ClCompile Include="MyForm12.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +139,12 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyForm1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm10.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm11.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyForm2.h">
@@ -155,6 +165,12 @@
     <ClInclude Include="MyForm7.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MyForm8.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm9.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyForm12.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -165,6 +181,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm1.resx">
       <DependentUpon>MyForm1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm10.resx">
+      <DependentUpon>MyForm10.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm11.resx">
+      <DependentUpon>MyForm11.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm2.resx">
       <DependentUpon>MyForm2.h</DependentUpon>
@@ -183,6 +205,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm7.resx">
       <DependentUpon>MyForm7.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm8.resx">
+      <DependentUpon>MyForm8.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm9.resx">
+      <DependentUpon>MyForm9.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm12.resx">
       <DependentUpon>MyForm12.h</DependentUpon>
