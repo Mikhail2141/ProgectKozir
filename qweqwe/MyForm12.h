@@ -12,10 +12,10 @@ namespace qweqwe {
 	/// <summary>
 	/// Сводка для MyForm8
 	/// </summary>
-	public ref class MyForm11 : public System::Windows::Forms::Form
+	public ref class MyForm12 : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm11(void)
+		MyForm12(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace qweqwe {
 		/// <summary>
 		/// Освободить все используемые ресурсы.
 		/// </summary>
-		~MyForm11()
+		~MyForm12()
 		{
 			if (components)
 			{
@@ -125,7 +125,7 @@ namespace qweqwe {
 			this->label4->Size = System::Drawing::Size(249, 20);
 			this->label4->TabIndex = 11;
 			this->label4->Text = L"Площадь паралеллограмма";
-			this->label4->Click += gcnew System::EventHandler(this, &MyForm11::label4_Click);
+			this->label4->Click += gcnew System::EventHandler(this, &MyForm12::label4_Click);
 			// 
 			// button1
 			// 
@@ -138,7 +138,7 @@ namespace qweqwe {
 			this->button1->TabIndex = 12;
 			this->button1->Text = L"Решить";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm11::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm12::button1_Click);
 			// 
 			// label2
 			// 
@@ -151,7 +151,7 @@ namespace qweqwe {
 			this->label2->Size = System::Drawing::Size(280, 20);
 			this->label2->TabIndex = 13;
 			this->label2->Text = L"Площадь паралеллограмма №2";
-			this->label2->Click += gcnew System::EventHandler(this, &MyForm11::label2_Click_1);
+			this->label2->Click += gcnew System::EventHandler(this, &MyForm12::label2_Click_1);
 			// 
 			// MyForm11
 			// 
