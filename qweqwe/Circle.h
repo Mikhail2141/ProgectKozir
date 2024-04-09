@@ -36,7 +36,7 @@ namespace qweqwe {
 		}
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Button^ button1;
+
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label4;
@@ -45,6 +45,7 @@ namespace qweqwe {
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Button^ button1;
 
 	protected:
 
@@ -63,7 +64,6 @@ namespace qweqwe {
 		{
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
@@ -71,6 +71,7 @@ namespace qweqwe {
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// textBox1
@@ -90,17 +91,6 @@ namespace qweqwe {
 			this->label1->Size = System::Drawing::Size(24, 24);
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"R";
-			// 
-			// button1
-			// 
-			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
-			this->button1->Location = System::Drawing::Point(115, 280);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(116, 35);
-			this->button1->TabIndex = 5;
-			this->button1->Text = L"Решить";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &Circle::button1_Click);
 			// 
 			// label7
 			// 
@@ -181,11 +171,23 @@ namespace qweqwe {
 			this->label3->TabIndex = 18;
 			this->label3->Text = L"Периметр круга =";
 			// 
+			// button1
+			// 
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
+			this->button1->Location = System::Drawing::Point(114, 280);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(116, 35);
+			this->button1->TabIndex = 19;
+			this->button1->Text = L"Решить";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &Circle::button1_Click_1);
+			// 
 			// Circle
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(372, 327);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label6);
@@ -193,7 +195,6 @@ namespace qweqwe {
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label7);
-			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->textBox1);
 			this->Name = L"Circle";
@@ -203,28 +204,33 @@ namespace qweqwe {
 
 		}
 #pragma endregion
-	
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	
-		double radius;
-
-		try
-		{
-			
-			radius = Convert::ToDouble(textBox1->Text);
-		}
-		catch (FormatException^)
-		{
-			MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения для радиуса");
-			return;
-		}
-
-
-		double Square_circle = 3.14 * radius * radius ;
-		double Perimeter_circle = 3.14 * 2 * radius ;
-
-		label4->Text = "Площадь круга  = "  + Square_circle.ToString();
-		label5->Text = "Периметр круга = "  + Perimeter_circle.ToString();
+	private: System::Void Circle_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+
+	}
+private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	double radius;
+
+	try
+	{
+
+		radius = Convert::ToDouble(textBox1->Text);
+	}
+	catch (FormatException^)
+	{
+		MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения для радиуса");
+		return;
+	}
+
+
+	double Square_circle = 3.14 * radius * radius;
+	double Perimeter_circle = 3.14 * 2 * radius;
+
+	label4->Text = "Площадь круга  = " + Square_circle.ToString();
+	label5->Text = "Периметр круга = " + Perimeter_circle.ToString();
+
+}
 };
 }

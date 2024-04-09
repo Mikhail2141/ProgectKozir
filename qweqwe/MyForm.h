@@ -28,11 +28,6 @@ namespace qweqwe {
 	public:
 		String^ p;
 		
-
-
-		
-
-
 		MyForm(void)
 		{
 			InitializeComponent();
