@@ -72,7 +72,7 @@ namespace qweqwe {
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"Частота";
 			this->button1->UseVisualStyleBackColor = true;
-		 
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm13::button1_Click);
 			// 
 			// button2
 			// 
@@ -117,15 +117,20 @@ namespace qweqwe {
 	}
 
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-		F18 = gcnew MyForm18();
-		F18->Show();
+	
 	}
 
 	 
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-		F17 = gcnew MyForm17();
-		F17->Show();
-
+		F18 = gcnew MyForm18();
+		F18->Show();
+	
 	}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	F17 = gcnew MyForm17();
+	F17->Show();
+
+
+}
 };
 }
