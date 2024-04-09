@@ -6,6 +6,7 @@
 #include "MyForm9.h"
 #include "MyForm10.h"
 #include "MyForm11.h"
+#include "MyForm12.h"
 namespace qweqwe {
 
 	using namespace System;
@@ -22,7 +23,7 @@ namespace qweqwe {
 	{
 	public:
 		MyForm7^ F7;
-		MyForm11^ F11;
+		MyForm12^ F12;
 
 	 
 
@@ -205,6 +206,8 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 	F11 = gcnew MyForm11(); 
 	F11->Show();
 
+	F12 = gcnew MyForm12();
+	F12->Show();
 }
 };
 }
