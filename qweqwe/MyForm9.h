@@ -329,13 +329,20 @@ namespace qweqwe {
 #pragma endregion
     private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
        // Преобразуем текст из текстовых полей в числа для вычислений
+
+
+        double a  ;
+        double b  ;
+        double c  ;
+        double h;
         try
         {
-            double a = System::Convert::ToDouble(textBox3->Text);
-            double b = System::Convert::ToDouble(textBox7->Text);
-            double c = System::Convert::ToDouble(textBox6->Text);
-            double h = System::Convert::ToDouble(textBox2->Text);
+          a = System::Convert::ToDouble(textBox3->Text);
+          b = System::Convert::ToDouble(textBox7->Text);
+          c = System::Convert::ToDouble(textBox6->Text);
+          h = System::Convert::ToDouble(textBox2->Text);
         }
+      
         catch (FormatException^)
         {
             MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения");
@@ -351,7 +358,7 @@ namespace qweqwe {
        label10->Text = "Площадь по формуле Герона: " + s1.ToString();
 
        // Вычисляем площадь по основанию и высоте
-       double s2 = 0.5 * a * h;
+       double s2 = 0.5 * a * h ;
        label4->Text = "Площадь по основанию и высоте: " + s2.ToString();
 
        // Вычисляем площадь через два основания и sin
