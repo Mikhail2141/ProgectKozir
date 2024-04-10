@@ -131,7 +131,10 @@
     <ClCompile Include="MyForm16.cpp" />
     <ClCompile Include="MyForm17.cpp" />
     <ClCompile Include="MyForm18.cpp" />
+    <ClCompile Include="MyForm19.cpp" />
     <ClCompile Include="MyForm2.cpp" />
+    <ClCompile Include="MyForm20.cpp" />
+    <ClCompile Include="MyForm21.cpp" />
     <ClCompile Include="MyForm3.cpp" />
     <ClCompile Include="MyForm4.cpp" />
     <ClCompile Include="MyForm5.cpp" />
@@ -174,7 +177,16 @@
     <ClInclude Include="MyForm18.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MyForm19.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyForm2.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm20.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm21.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyForm3.h">
@@ -233,8 +245,17 @@
     <EmbeddedResource Include="MyForm18.resx">
       <DependentUpon>MyForm18.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyForm19.resx">
+      <DependentUpon>MyForm19.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm2.resx">
       <DependentUpon>MyForm2.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm20.resx">
+      <DependentUpon>MyForm20.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm21.resx">
+      <DependentUpon>MyForm21.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm3.resx">
       <DependentUpon>MyForm3.h</DependentUpon>
