@@ -11,8 +11,8 @@ using namespace System;
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 	Application::Run(gcnew  MyForm5);
- 	return 0;
-//	//now we can run but it still can't show form design at design time 
-//	// it still error about call stack
-//	// adasdasdas
+	return 0;
+	//	//now we can run but it still can't show form design at design time 
+	//	// it still error about call stack
+	//	// adasdasdas
 }

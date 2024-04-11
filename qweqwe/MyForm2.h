@@ -217,6 +217,23 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	double a = System::Convert::ToDouble(textBox1->Text);
 	double b = System::Convert::ToDouble(textBox2->Text);
 	double c = System::Convert::ToDouble(textBox3->Text);
+	double a;
+	double b;
+	double c;
+
+	try
+	{
+		b = Convert::ToDouble(textBox2->Text);
+		a = Convert::ToDouble(textBox1->Text);
+		c = Convert::ToDouble(textBox3->Text);
+	}
+	catch (FormatException^)
+	{
+		MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения для длины и ширины прямоугольника");
+		return;
+	}
+
+
 	double D = (b * b) - (4 * (a * c));
 	double x1 = (((b * (-1)) + (Math::Sqrt(D))) / (2 * a));
 	double x2 = (((b * (-1)) - (Math::Sqrt(D))) / (2 * a));
