@@ -130,6 +130,7 @@ namespace qweqwe {
 			this->button1->TabIndex = 21;
 			this->button1->Text = L"Решить";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm17::button1_Click);
 			// 
 			// label4
 			// 
@@ -165,5 +166,22 @@ namespace qweqwe {
 #pragma endregion
 	private: System::Void MyForm17_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-	};
+
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		double fluctuations;//колебания
+		double Period;
+		try
+		{
+			fluctuations = Convert::ToDouble(textBox2->Text);
+			Period = Convert::ToDouble(textBox1->Text);
+		}
+		catch (FormatException^)
+		{
+			MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения для Периода или колебания");
+			return;}
+		double Length = fluctuations / Period;
+
+		label4->Text = " Частота " + " = " + Length.ToString();
+	}
+};
 }
