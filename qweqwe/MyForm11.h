@@ -3,15 +3,14 @@
 #include <cmath>
 namespace qweqwe {
 
-	using namespace System;
-	using namespace System::ComponentModel;
-	using namespace System::Collections;
-	using namespace System::Windows::Forms;
-	using namespace System::Data;
-	using namespace System::Drawing;
+    using namespace System;
+    using namespace System::ComponentModel;
+    using namespace System::Collections;
+    using namespace System::Windows::Forms;
+    using namespace System::Data;
+    using namespace System::Drawing;
 
-	/// <summary>
-	/// Сводка для MyForm8
+    /// <summary>
     /// Сводка для MyForm9
 	/// Сводка для MyForm11
 	/// </summary>
@@ -26,6 +25,17 @@ namespace qweqwe {
 			//
 		}
 
+    protected:
+        /// <summary>
+        /// Освободить все используемые ресурсы.
+        /// </summary>
+        ~MyForm9()
+        {
+            if (components)
+            {
+                delete components;
+            }
+        }
 	protected:
 		/// <summary>
 		/// Освободить все используемые ресурсы.
@@ -56,8 +66,6 @@ namespace qweqwe {
 
 
 
-	private: System::ComponentModel::IContainer^ components;
-
     private: System::Windows::Forms::TextBox^ textBox6;
     private: System::Windows::Forms::TextBox^ textBox7;
 	private: System::Windows::Forms::Label^ label6;
@@ -75,26 +83,24 @@ namespace qweqwe {
 	private: System::Windows::Forms::TextBox^ textBox6;
     private: System::Windows::Forms::Label^ label12;
     private: System::Windows::Forms::Label^ label13;
-	protected:
+    protected:
 
+    protected:
 
-	protected:
-
-	private:
-		/// <summary>
-		/// Обязательная переменная конструктора.
-		/// </summary>
+    private:
+        /// <summary>
+        /// Обязательная переменная конструктора.
+        /// </summary>
         System::ComponentModel::Container^ components;
 		System::ComponentModel::Container ^components;
 
-
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
-		/// </summary>
-		void InitializeComponent(void)
-		{
+        /// <summary>
+        /// Требуемый метод для поддержки конструктора — не изменяйте 
+        /// содержимое этого метода с помощью редактора кода.
+        /// </summary>
+        void InitializeComponent(void)
+        {
             this->label1 = (gcnew System::Windows::Forms::Label());
             this->label2 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
@@ -171,25 +177,21 @@ namespace qweqwe {
 			this->label10->TabIndex = 24;
 			this->label10->Text = L"Сторона ромба ";
             // 
-			// textBox1
-			// 
-			this->textBox1->Location = System::Drawing::Point(46, 143);
+            // textBox1
+            // 
             this->textBox1->Location = System::Drawing::Point(27, 84);
             this->textBox1->Margin = System::Windows::Forms::Padding(4);
-			this->textBox1->Multiline = true;
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(54, 51);
-			this->textBox1->TabIndex = 5;
+            this->textBox1->Multiline = true;
+            this->textBox1->Name = L"textBox1";
             this->textBox1->Size = System::Drawing::Size(71, 62);
             this->textBox1->TabIndex = 8;
-			// 
-			// textBox2
-			// 
-			this->textBox2->Location = System::Drawing::Point(389, 143);
+            // 
+            // textBox2
+            // 
             this->textBox2->Location = System::Drawing::Point(175, 84);
             this->textBox2->Margin = System::Windows::Forms::Padding(4);
-			this->textBox2->Multiline = true;
-			this->textBox2->Name = L"textBox2";
+            this->textBox2->Multiline = true;
+            this->textBox2->Name = L"textBox2";
             this->textBox2->Size = System::Drawing::Size(71, 62);
             this->textBox2->TabIndex = 9;
             // 
@@ -419,8 +421,7 @@ namespace qweqwe {
 			// 
 			// button1
             // label10
-			// 
-			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            // 
             this->label10->AutoSize = true;
             this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
@@ -521,8 +522,7 @@ namespace qweqwe {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
             this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(521, 494);
+            this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
             this->ClientSize = System::Drawing::Size(881, 524);
             this->Controls->Add(this->label13);
 			this->ClientSize = System::Drawing::Size(1090, 565);
@@ -568,7 +568,7 @@ namespace qweqwe {
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
-		}
+        }
 #pragma endregion
 	private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
@@ -613,13 +613,12 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 			Sin = Convert::ToDouble(textBox6->Text);
 	}
       
-	catch (FormatException^)
-	{
-		MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения для длины и ширины прямоугольника");
+        catch (FormatException^)
+        {
             MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения");
-		return;
-	}
-
+            return;
+        }
+      
 
        // Вычисляем полупериметр
        double p = (a + b + c) / 2;
@@ -646,7 +645,6 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		double Square3 = pow(rhombSide, 2) *  round (sin(rhombSide) *100) / 100; 
 		label3->Text = "Площадь ромба через сторону и угол sin a" + " = " + Square3;
 
-	double Square = rectangleLength * rectangleWidth;
        // Вычисляем площадь через радиус вписанной окружности
        double radius = (a * b * c) / (4 * s1);
        double s4 = 0.5 * radius * (a + b + c);

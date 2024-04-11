@@ -156,7 +156,6 @@ namespace qweqwe {
 			this->button6->TabIndex = 5;
 			this->button6->Text = L"Паралеллограм";
 			this->button6->UseVisualStyleBackColor = true;
-			this->button6->Click += gcnew System::EventHandler(this, &MyForm6::button6_Click);
 			// 
 			// MyForm6
 			// 
