@@ -1,5 +1,6 @@
 #pragma once
 #include <cmath>
+
 namespace qweqwe {
 
 	using namespace System;
@@ -363,7 +364,7 @@ namespace qweqwe {
 		label2->Text = "Площадь ромба через две диагонали" + " = " + Square2;
 
 		// Рассчёт площади ромба через сторону и угол sin a
-		double Square3 = pow(rhombSide, 2) *  round (sin(rhombSide) *100) / 100; 
+		double Square3 = pow(rhombSide, 2) *  round (sin(rhombSide) * 100) / 100; 
 		label3->Text = "Площадь ромба через сторону и угол sin a" + " = " + Square3;
 
 		// Рассчёт площади ромба через радиус вписанной окружности и сторону
