@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <cmath>
 
 using namespace System;
 
@@ -198,8 +199,8 @@ namespace qweqwe {
             return;
         }
 
-        double result1 = Math::Pow(number1 * number2, 1.0 / exponent);
-        double result2 = Math::Pow(number1 / number2, 1.0 / exponent);
+        double result1 = round (Math::Pow(number1 * number2, 1.0 / exponent) * 100) / 100;
+        double result2 = round (Math::Pow(number1 / number2, 1.0 / exponent) * 100) / 100;
 
         label3->Text = " n^√a*b = " + result1.ToString();
         label4->Text = " n^√a/b = " + result2.ToString();

@@ -1,4 +1,5 @@
 #pragma once
+#include <cmath>
 
 namespace qweqwe {
 
@@ -232,8 +233,8 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 
 
 	double D = (b * b) - (4 * (a * c));
-	double x1 = (((b * (-1)) + (Math::Sqrt(D))) / (2 * a));
-	double x2 = (((b * (-1)) - (Math::Sqrt(D))) / (2 * a));
+	double x1 = round ((((b * (-1)) + (Math::Sqrt(D))) / (2 * a)) * 100) / 100;
+	double x2 = round ((((b * (-1)) - (Math::Sqrt(D))) / (2 * a)) * 100) / 100;
 	if (D > 0)
 	{
 		l1 = "D = b*b - 4*a*c = " + D;
