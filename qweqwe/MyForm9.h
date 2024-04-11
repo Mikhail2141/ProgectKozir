@@ -1,4 +1,5 @@
 #pragma once
+#include <cmath>
 
 namespace qweqwe {
 
@@ -353,7 +354,7 @@ namespace qweqwe {
        double p = (a + b + c) / 2;
 
        // Вычисляем площадь по формуле Герона
-       double s1 = System::Math::Sqrt(p * (p - a) * (p - b) * (p - c));
+       double s1 = round (System::Math::Sqrt(p * (p - a) * (p - b) * (p - c)) * 100) / 100;
        label10->Text = "Площадь по формуле Герона: " + s1.ToString();
 
        // Вычисляем площадь по основанию и высоте
@@ -362,12 +363,12 @@ namespace qweqwe {
 
        // Вычисляем площадь через два основания и sin
        double angleC = System::Math::Asin((2 * s1) / (a * b));
-       double s3 = 0.5 * a * b * System::Math::Sin(angleC);
+       double s3 = round ((0.5 * a * b * System::Math::Sin(angleC)) * 100) / 100;
        label5->Text = "Площадь через два основания и sin: " + s3.ToString();
 
        // Вычисляем площадь через радиус вписанной окружности
        double radius = (a * b * c) / (4 * s1);
-       double s4 = 0.5 * radius * (a + b + c);
+       double s4 = round ((0.5 * radius * (a + b + c)) * 100) / 100;
        label11->Text = "Площадь через радиус вписанной окружности: " + s4.ToString();
        
        // Периметр 
