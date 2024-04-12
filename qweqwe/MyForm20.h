@@ -87,6 +87,7 @@ namespace qweqwe {
 			this->button1->TabIndex = 23;
 			this->button1->Text = L"Решить";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm20::button1_Click);
 			// 
 			// textBox1
 			// 
@@ -159,5 +160,25 @@ namespace qweqwe {
 
 		}
 #pragma endregion
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		double F; 
+		double S; 
+
+		try
+		{
+			F = Convert::ToDouble(textBox2->Text); 
+			S = Convert::ToDouble(textBox1->Text);
+		}
+		catch ( FormatException^)
+		{
+			 MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения");
+			 return;
+		}
+
+
+		double pressure = F / S; 
+		label4->Text = "Давление" + " = " + pressure; 
+	}
+};
 }

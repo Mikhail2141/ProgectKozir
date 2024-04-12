@@ -37,7 +37,7 @@ namespace qweqwe {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox1;
+
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label4;
@@ -60,7 +60,6 @@ namespace qweqwe {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
@@ -89,6 +88,7 @@ namespace qweqwe {
 			this->button1->TabIndex = 24;
 			this->button1->Text = L"Решить";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm21::button1_Click);
 			// 
 			// textBox2
 			// 
@@ -98,15 +98,7 @@ namespace qweqwe {
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(49, 35);
 			this->textBox2->TabIndex = 26;
-			// 
-			// textBox1
-			// 
-			this->textBox1->Location = System::Drawing::Point(533, 95);
-			this->textBox1->Margin = System::Windows::Forms::Padding(4);
-			this->textBox1->Multiline = true;
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(49, 35);
-			this->textBox1->TabIndex = 27;
+		 
 			// 
 			// label2
 			// 
@@ -160,7 +152,6 @@ namespace qweqwe {
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
-			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
@@ -171,5 +162,30 @@ namespace qweqwe {
 
 		}
 #pragma endregion
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		double m;
+		const double g = 9.8;
+
+		try
+		{
+			m = Convert::ToDouble(textBox2->Text);
+			//   Convert::ToDouble(textBox1->Text) ; 
+
+		}
+		catch (FormatException^)
+		{
+			MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения");
+			return;
+		}
+
+		double power = m * g;
+
+		label5->Text = "Сила тяжести" + " = " + power; 
+
+
+
+	}
+ 
+};
 }
