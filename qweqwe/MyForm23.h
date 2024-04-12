@@ -1,4 +1,5 @@
 #pragma once
+#include <cmath>
 
 namespace qweqwe {
 
@@ -205,7 +206,7 @@ namespace qweqwe {
 		}
 
 
-		double a = (v - u) / t;
+		double a = round (((v - u) / t) * 100) / 100;
 		label5->Text = "Ускорение" + " = " + a;
 
 	}

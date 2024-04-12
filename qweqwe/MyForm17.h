@@ -1,4 +1,5 @@
 #pragma once
+#include <cmath>
 
 namespace qweqwe {
 
@@ -179,7 +180,7 @@ namespace qweqwe {
 		{
 			MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения для Периода или колебания");
 			return;}
-		double Length = fluctuations / Period;
+		double Length = round ((fluctuations / Period) * 100) / 100;
 
 		label4->Text = " Частота " + " = " + Length.ToString();
 	}
