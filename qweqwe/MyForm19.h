@@ -1,4 +1,5 @@
 #pragma once
+#include <cmath>
 
 namespace qweqwe {
 
@@ -179,7 +180,7 @@ namespace qweqwe {
 			return;
 		}
 	
-		double P = m / V; 
+		double P = round ((m / V) * 100) / 100; 
 
 		label4->Text = "Плотность вещества" + " = " + P; 
 	

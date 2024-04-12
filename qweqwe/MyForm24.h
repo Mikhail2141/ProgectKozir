@@ -1,4 +1,5 @@
 #pragma once
+#include <cmath>
 
 namespace qweqwe {
 
@@ -236,10 +237,10 @@ namespace qweqwe {
 		double _S = V * t;
 
 		//Скорость
-		double _v = S / t;
+		double _v = round ((S / t) * 100) / 100;
 
 		//Время
-		double _t = S / V; 
+		double _t = round ((S / V) * 100) / 100; 
 
 		label7->Text = "Расстояние" + " = " + _S;
 		label6->Text = "Скорость" + " = " + _v; 

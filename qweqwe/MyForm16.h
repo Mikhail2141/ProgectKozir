@@ -1,5 +1,7 @@
 #pragma once
 #include "MyForm16.h"
+#include <cmath>
+
 namespace qweqwe {
 
 	using namespace System;
@@ -176,7 +178,7 @@ namespace qweqwe {
 			MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения для Время или колебания");
 			return;
 		}
-		double Length = Time  / fluctuations;
+		double Length = round ((Time  / fluctuations) * 100) / 100;
 
 		label4->Text = " Период " + " = " + Length.ToString();
 
