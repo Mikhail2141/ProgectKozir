@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <cmath>
 
 namespace qweqwe {
 
@@ -197,7 +198,7 @@ namespace qweqwe {
 		}
 
 
-		double Length = speed / Period;
+		double Length = round ((speed / Period) * 100) / 100;
 
 
 		label4->Text = " Длина волны " + " = " + Length.ToString();
