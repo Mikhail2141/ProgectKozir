@@ -172,8 +172,8 @@ namespace qweqwe {
 		double Period;
 		try
 		{
-			fluctuations = Convert::ToDouble(textBox2->Text);
-			Period = Convert::ToDouble(textBox1->Text);
+			fluctuations = Convert::ToDouble(textBox1->Text);
+			Period = Convert::ToDouble(textBox2->Text);
 		}
 		catch (FormatException^)
 		{
