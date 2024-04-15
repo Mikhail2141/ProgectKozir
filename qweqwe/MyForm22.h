@@ -196,6 +196,8 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	}
 	double result_one = x * y;	//ןכמשאהü
 	double result_two = 2 * (x + y);	//ןונטלוענ
+	label3->Text = "Ïכמשאהü ןאנאכוככמדנאללא " + result_one;
+	label1->Text = "Ïונטלוענ ןאנאכוככמדנאללא " + result_two;
 }
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
