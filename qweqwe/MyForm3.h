@@ -233,8 +233,8 @@ namespace qweqwe {
 		   }
     catch (FormatException^)
     {
-      MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения для основания и экспоненты.");
-      return;
+		MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения.");
+		return;
     }
 
     int product = MultiplyExponents( baseValue,  exponent1, exponent2);
