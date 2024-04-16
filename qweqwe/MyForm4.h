@@ -53,6 +53,7 @@ namespace qweqwe {
 #pragma region Windows Form Designer generated code
         void InitializeComponent(void)
         {
+            System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm4::typeid));
             this->SolveButton = (gcnew System::Windows::Forms::Button());
             this->textBox2 = (gcnew System::Windows::Forms::TextBox());
             this->textBox1 = (gcnew System::Windows::Forms::TextBox());
@@ -99,7 +100,7 @@ namespace qweqwe {
             this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
             this->label1->Location = System::Drawing::Point(12, 43);
             this->label1->Name = L"label1";
-            this->label1->Size = System::Drawing::Size(81, 24);
+            this->label1->Size = System::Drawing::Size(95, 24);
             this->label1->TabIndex = 4;
             this->label1->Text = L"Степень";
             // 
@@ -170,6 +171,7 @@ namespace qweqwe {
             this->Controls->Add(this->textBox1);
             this->Controls->Add(this->textBox2);
             this->Controls->Add(this->SolveButton);
+            this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
             this->Name = L"MyForm4";
             this->Text = L"Свойство корней в n-ой степени";
             this->Load += gcnew System::EventHandler(this, &MyForm4::MyForm4_Load);
