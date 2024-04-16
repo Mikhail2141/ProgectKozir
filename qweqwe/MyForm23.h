@@ -201,7 +201,7 @@ namespace qweqwe {
 		}
 		catch ( FormatException^)
 		{
-			MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения");
+			MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения.");
 			return;
 		}
 

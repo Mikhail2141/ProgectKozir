@@ -175,7 +175,7 @@ namespace qweqwe {
 		}
 		catch (FormatException^)
 		{
-			MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения для Время или колебания");
+			MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения.");
 			return;
 		}
 		double Length = round ((Time  / fluctuations) * 100) / 100;

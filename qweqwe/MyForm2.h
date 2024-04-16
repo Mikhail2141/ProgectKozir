@@ -227,7 +227,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	}
 	catch (FormatException^)
 	{
-		MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения для длины и ширины прямоугольника");
+		MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения.");
 		return;
 	}
 

@@ -191,7 +191,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	}
 	catch (FormatException^)
 	{
-		MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения");
+		MessageBox::Show("Ошибка: Пожалуйста, введите допустимые целочисленные значения.");
 		return;
 	}
 	double result_one = x * y;	//площадь
