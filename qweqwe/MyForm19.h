@@ -57,6 +57,7 @@ namespace qweqwe {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm19::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
@@ -71,9 +72,10 @@ namespace qweqwe {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label1->Location = System::Drawing::Point(53, 9);
+			this->label1->Location = System::Drawing::Point(40, 7);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(263, 25);
+			this->label1->Size = System::Drawing::Size(217, 20);
 			this->label1->TabIndex = 6;
 			this->label1->Text = L"Плотность вещества (p)";
 			// 
@@ -81,10 +83,10 @@ namespace qweqwe {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button1->Location = System::Drawing::Point(110, 259);
-			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button1->Location = System::Drawing::Point(82, 210);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(137, 64);
+			this->button1->Size = System::Drawing::Size(103, 52);
 			this->button1->TabIndex = 22;
 			this->button1->Text = L"Решить";
 			this->button1->UseVisualStyleBackColor = true;
@@ -92,32 +94,30 @@ namespace qweqwe {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(187, 79);
-			this->textBox1->Margin = System::Windows::Forms::Padding(4);
+			this->textBox1->Location = System::Drawing::Point(140, 64);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(49, 35);
+			this->textBox1->Size = System::Drawing::Size(38, 29);
 			this->textBox1->TabIndex = 23;
-	 
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label2->Location = System::Drawing::Point(12, 79);
+			this->label2->Location = System::Drawing::Point(9, 64);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(117, 25);
+			this->label2->Size = System::Drawing::Size(94, 20);
 			this->label2->TabIndex = 24;
 			this->label2->Text = L"m -  масса";
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(187, 130);
-			this->textBox2->Margin = System::Windows::Forms::Padding(4);
+			this->textBox2->Location = System::Drawing::Point(140, 106);
 			this->textBox2->Multiline = true;
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(49, 35);
+			this->textBox2->Size = System::Drawing::Size(38, 29);
 			this->textBox2->TabIndex = 25;
 			// 
 			// label3
@@ -125,9 +125,10 @@ namespace qweqwe {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label3->Location = System::Drawing::Point(12, 130);
+			this->label3->Location = System::Drawing::Point(9, 106);
+			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(114, 25);
+			this->label3->Size = System::Drawing::Size(91, 20);
 			this->label3->TabIndex = 26;
 			this->label3->Text = L"V - объём";
 			// 
@@ -136,17 +137,18 @@ namespace qweqwe {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label4->Location = System::Drawing::Point(12, 196);
+			this->label4->Location = System::Drawing::Point(9, 159);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(88, 25);
+			this->label4->Size = System::Drawing::Size(70, 20);
 			this->label4->TabIndex = 27;
 			this->label4->Text = L"р = m/V";
 			// 
 			// MyForm19
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(365, 334);
+			this->ClientSize = System::Drawing::Size(274, 271);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->textBox2);
@@ -154,6 +156,8 @@ namespace qweqwe {
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"MyForm19";
 			this->Text = L"MyForm19";
 			this->ResumeLayout(false);

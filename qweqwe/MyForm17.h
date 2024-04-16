@@ -59,6 +59,7 @@ namespace qweqwe {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm17::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
@@ -157,6 +158,7 @@ namespace qweqwe {
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"MyForm17";
 			this->Text = L"MyForm17";
 			this->Load += gcnew System::EventHandler(this, &MyForm17::MyForm17_Load);

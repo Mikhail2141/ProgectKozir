@@ -59,6 +59,7 @@ namespace qweqwe {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm15::typeid));
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
@@ -67,10 +68,9 @@ namespace qweqwe {
 			// button2
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
-			this->button2->Location = System::Drawing::Point(156, 45);
-			this->button2->Margin = System::Windows::Forms::Padding(4);
+			this->button2->Location = System::Drawing::Point(117, 37);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(228, 52);
+			this->button2->Size = System::Drawing::Size(171, 42);
 			this->button2->TabIndex = 4;
 			this->button2->Text = L"Ускорение";
 			this->button2->UseVisualStyleBackColor = true;
@@ -79,10 +79,9 @@ namespace qweqwe {
 			// button3
 			// 
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
-			this->button3->Location = System::Drawing::Point(45, 117);
-			this->button3->Margin = System::Windows::Forms::Padding(4);
+			this->button3->Location = System::Drawing::Point(34, 95);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(460, 52);
+			this->button3->Size = System::Drawing::Size(345, 42);
 			this->button3->TabIndex = 6;
 			this->button3->Text = L"Расстояние, скорость, время ";
 			this->button3->UseVisualStyleBackColor = true;
@@ -91,10 +90,9 @@ namespace qweqwe {
 			// button4
 			// 
 			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold));
-			this->button4->Location = System::Drawing::Point(13, 188);
-			this->button4->Margin = System::Windows::Forms::Padding(4);
+			this->button4->Location = System::Drawing::Point(10, 153);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(516, 52);
+			this->button4->Size = System::Drawing::Size(387, 42);
 			this->button4->TabIndex = 7;
 			this->button4->Text = L" Скорость свободно падающего тела";
 			this->button4->UseVisualStyleBackColor = true;
@@ -102,13 +100,13 @@ namespace qweqwe {
 			// 
 			// MyForm15
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(540, 299);
+			this->ClientSize = System::Drawing::Size(405, 243);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
-			this->Margin = System::Windows::Forms::Padding(4);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"MyForm15";
 			this->Text = L"MyForm15";
 			this->ResumeLayout(false);
